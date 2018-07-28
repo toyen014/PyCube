@@ -1,3 +1,4 @@
+import numpy
 #SPECIFICATIONS FOR A 3X3X3 CUBE
 FRONT_UPPER_EDGE_ALTERNATIVE = 1
 CORNER_ALTERNATIVE = 2 #how many colors does one CORNER_ STICKER_ have? - 3 and so for one STICKER_ of a CORNER_ piece, there are two others
@@ -70,30 +71,34 @@ def collectOneSide(sideArgument):
 
 #=====================================================================================================================================================================================================================
 zadavani_barev = ["Please choose color; that from now on will be your front face.\nWill you please enter the colors of that face, starting from the Upper-Left corner?",
-    "Great. Now turn the cube, so you can view the right side.\nEnter colors, starting from the U-L corner.",
     "Now turn the cube in that manner, so you see the current upper part of the cube.\nAgain, please enter the colors you see starting from the Upper-Left corner.",
+    "Great. Now turn the cube, so you can view the right side.\nEnter colors, starting from the U-L corner.",
     "For the next one, please repeat the step of looking at the CURRENT upper side.\nAnd again, please type in colors, starting with the U-L corner.",
     "Now, please look on right side agan.\nPlease enter in the colors as previously.",
     "Finally, view the upper layer. \nEnter the last 9 colors."]
 for colorInputColor in range(len(zadavani_barev)):
     print(zadavani_barev[colorInputColor])
     collectOneSide(SIDE_ORDER[colorInputColor])
-for inputTypeCounter in cubeinput
-    numpy.reshape(inputTypeCounter, (6, 4))
+for inputTypeCounter in cubeinput:
+    inputTypeCounter = numpy.reshape(inputTypeCounter, (6, 4))
+print(inputEdges + inputCorners + inputCenters)
 
 
 # ==============================================================================================================================================================================================================
 #CHEKS BY PRINTING OUT THE STUFF
-# for x in :
-#     print(f'''
-#     === === ===
-#     | {} | {} | {} |
-#     --- --- ---
-#     | {} | {} | {} |
-#     --- --- ---
-#     | {} | {} | {} |
-#     === === ===''')
-#=====================================================================================================================================================================================================================
+for x in range(2):
+   print('''
+     === === ===
+     | {} | {} | {} |
+     --- --- ---
+     | {} | {} | {} |
+     --- --- ---
+     | {} | {} | {} |
+     === === ==='''.format (inputCorners [0, 0]),inputEdges([0],[0]),inputCorners([0],[1]),inputEdges([0],[1]),inputCenters([0],[0]),inputEdges([0],[2]),inputCorners([0],[2]),inputEdges([0],[3]),inputCorners([0],[3])))
+
+
+
+#==================================================================================================================================================================================================================
 
 
 
