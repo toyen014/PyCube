@@ -1,3 +1,4 @@
+import numpy
 #SPECIFICATIONS FOR A 3X3X3 CUBE
 FRONT_UPPER_EDGE_ALTERNATIVE = 1
 CORNER_ALTERNATIVE = 2 #how many colors does one CORNER_ STICKER_ have? - 3 and so for one STICKER_ of a CORNER_ piece, there are two others
@@ -44,7 +45,7 @@ def collectOneSide(sideArgument):
     #inputting colors, always 9
     counter = 1
     while (counter<=(NUMBER_OF_TOTAL_STICKER_ONESIDE)):
-        color = input("\r")
+        color = input("")
         #this could be looped
         if color not in COLOR_PAIRS:
             print(" You've entered an invalid color abbreviation. Please try entering the color once more.")
@@ -58,14 +59,19 @@ def collectOneSide(sideArgument):
         counter += 1
 # CHECKER!! MISSING
 #===================================================================================================================================================================================================================
-# def returnSurroundings(turnDirection):
-#
-#
-# def simpleTurn(turnDirection):#Argument is
-#     current = CORRECT_EDGES[SIDE_ORDER.index(turnDirection)]
-#     current[0], current[1], current[2], current[3] = current[1], current[2], current[3], current[0]
-#     for rotationalCounter in NUMBER_OF_EDGES_STICKER_ONESIDE:
-#         CORRECT_EDGES[]
+def simpleTurn(turnDirection):#Argument is
+    numpy.roll(inputEdges[SIDE_ORDER.index(turnDirection)], 1)#the argumen, if its e.g.: F, then it will take the list of inputEdges[0] and shift
+    rotationalSide = []
+    bufferIndex = [] # the coordinates to one of the sought edges, and every time one is found, the rotationalSide list copies it and so this buffer gets deleted
+    for rotationalCounter in inputEdges:
+        for elementCounter in inputEdges[SIDE_ORDER.index(turnDirection)]
+                if rotationalCounter == elementCounter:
+                    bufferIndex.append(inputEdges[rotationalCounter])
+                    bufferIndex.append(inputEdges.index(turnDirection)
+                    rotationSide.append(bufferIndex)
+                    bufferIndex = []
+    #needs LOOPING
+    inputEdges[rotationalSide[0]], inputEdges[rotationalSide[1]], inputEdges[rotationalSide[2]], inputEdges[rotationalSide[3]] = inputEdges[rotationalSide[1]], inputEdges[rotationalSide[2]], inputEdges[rotationalSide[3]], inputEdges[rotationalSide[0]]
 #=====================================================================================================================================================================================================================
 
 #=====================================================================================================================================================================================================================
@@ -94,106 +100,3 @@ for inputTypeCounter in cubeinput
 #     | {} | {} | {} |
 #     === === ===''')
 #=====================================================================================================================================================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-# correctCube = []
-# edgeCounter = 0
-# cornerCounter = 0
-#
-# for sideCounter in range(NUMBER_OF_SIDES):
-#     for oneSideCounter in range(NUMBER_OF_TOTAL_STICKER_ONESIDE+1):
-#         if oneSideCounter%2 == 0:
-#             correctCube.append(CORRECT_EDGES[sideCounter][edgeCounter])
-#             edgeCounter+=1
-#         elif oneSideCounter%5==0:
-#             correctCube.append(CORRECT_CENTERS[sideCounter])
-#         else:
-#             correctCube.append(CORRECT_CORNERS[sideCounter][cornerCounter])
-#             cornerCounter+=1
-# print(correctCube)
-
-
-# def fTurnEdge(inputFrontEdges, inputRightEdges, inputLeftEdges, inputUpperEdges, inputDownEdge):
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# # theCorrectCube = []
-# #
-# # for stickerCounter in (range(TOTAL_NUMBER_OF_STICKER)+1):
-# #     for sideCounter in NUMBER_OF_SIDES
-#
-#
-#             # if (stickerCounter%9)%2 = 1:
-#                 # theCube.append(CORRECT_CORNERS([][stickerCounter]))
-#             # else:
-#                 # theCube.append(CORRECT_EDGES([sideCounter]))
-#
-# #
-# #
-# #
-# # inputEDGES_ = ["inputFRONT_EDGES_", "inputDOWN_EDGES_", "inputBACK_EDGES_", "inputUPPER_EDGES_", "inputRIGHT_EDGES_", "inputLEFT_EDGES_"]
-# #
-# # # INPUT
