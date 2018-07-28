@@ -71,19 +71,15 @@ def collectOneSide(sideArgument):
 #=====================================================================================================================================================================================================================
 
 #=====================================================================================================================================================================================================================
-#could be looped
-print("Please choose color; that from now on will be your front face.\nWill you please enter the colors of that face, starting from the Upper-Left corner?")
-collectOneSide(SIDE_ORDER[0])
-print("Now turn the cube in that manner, so you see the current upper part of the cube.\nAgain, please enter the colors you see starting from the Upper-Left corner.")
-collectOneSide(SIDE_ORDER[1])
-print("Great. Now turn the cube, so you can view the right side.\nEnter colors, starting from the U-L corner.")
-collectOneSide(SIDE_ORDER[2])
-print("For the next one, please repeat the step of looking at the CURRENT upper side.\nAnd again, please type in colors, starting with the U-L corner.")
-collectOneSide(SIDE_ORDER[3])
-print(f"Now, please look on right side agan.\nPlease enter in the colors as previously.")
-collectOneSide(SIDE_ORDER[4])
-print("Finally, view the upper layer. \nEnter the last 9 colors.")
-collectOneSide(SIDE_ORDER[5])
+zadavani_barev = ["Please choose color; that from now on will be your front face.\nWill you please enter the colors of that face, starting from the Upper-Left corner?",
+    "Great. Now turn the cube, so you can view the right side.\nEnter colors, starting from the U-L corner.",
+    "Now turn the cube in that manner, so you see the current upper part of the cube.\nAgain, please enter the colors you see starting from the Upper-Left corner.",
+    "For the next one, please repeat the step of looking at the CURRENT upper side.\nAnd again, please type in colors, starting with the U-L corner.",
+    "Now, please look on right side agan.\nPlease enter in the colors as previously.",
+    "Finally, view the upper layer. \nEnter the last 9 colors."]
+for i in range(len(zadavani_barev)):
+    print(zadavani_barev[i])
+    collectOneSide(SIDE_ORDER[i])
 
 # ==============================================================================================================================================================================================================
 #CHEKS BY PRINTING OUT THE STUFF
