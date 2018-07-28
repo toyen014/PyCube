@@ -33,13 +33,11 @@ CORRECT_CORNERS = (CORRECT_FRONT_CORNERS, CORRECT_UPPER_CORNERS, CORRECT_RIGHT_C
 
 CORRECT_CENTERS = SIDE_ORDER [:]
 
-
-
 #====================================================================================================================================================================================================================
-
 inputCorners = []
 inputEdges = []
 inputCenters = []
+cubeinput = [inputEdges, inputCorners]
 
 #with this, you'll retrieve data of one side
 def collectOneSide(sideArgument):
@@ -77,9 +75,12 @@ zadavani_barev = ["Please choose color; that from now on will be your front face
     "For the next one, please repeat the step of looking at the CURRENT upper side.\nAnd again, please type in colors, starting with the U-L corner.",
     "Now, please look on right side agan.\nPlease enter in the colors as previously.",
     "Finally, view the upper layer. \nEnter the last 9 colors."]
-for i in range(len(zadavani_barev)):
-    print(zadavani_barev[i])
-    collectOneSide(SIDE_ORDER[i])
+for colorInputColor in range(len(zadavani_barev)):
+    print(zadavani_barev[colorInputColor])
+    collectOneSide(SIDE_ORDER[colorInputColor])
+for inputTypeCounter in cubeinput
+    numpy.reshape(inputTypeCounter, (6, 4))
+
 
 # ==============================================================================================================================================================================================================
 #CHEKS BY PRINTING OUT THE STUFF
